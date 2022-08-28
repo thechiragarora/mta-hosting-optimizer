@@ -36,7 +36,7 @@ class HostingController {
             { $skip: skip }, { $limit: limit },
             ]);
             const data = hostingAggregationResult.map(({ _id }) => _id);
-            res.send({ message: 'Success', data });
+            res.send({ message: 'Success', data, status: 200 });
         } catch (err) {
             next(err);
         }
