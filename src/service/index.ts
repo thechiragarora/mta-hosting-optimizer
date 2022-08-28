@@ -1,3 +1,3 @@
-import HostingService from "./hostingService";
+import HostingService from "./HostingService";
 
 export { HostingService };
