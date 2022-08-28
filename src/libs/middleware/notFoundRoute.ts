@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import statusCodes from '../constant/StatusCodes';
+import statusCodes from '../constant/statusCodes';
 import codeMessages from '../constant/codeMessages';
 
 export default (req: Request, res: Response, next: NextFunction) => {
