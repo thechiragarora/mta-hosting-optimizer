@@ -53,4 +53,5 @@ class HostingController {
     }
 }
 
+export { HostingController };
 export default HostingController.getInstance();
