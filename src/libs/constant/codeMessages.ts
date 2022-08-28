@@ -1,4 +1,4 @@
-export default {
+const codeMessages: Record<number, string> = {
     100: 'Continue',
     101: 'Switching Protocols',
     200: 'Success',
@@ -35,3 +35,5 @@ export default {
     504: 'Gateway Timeout',
     505: 'HTTP Version Not Supported'
 };
+
+export default codeMessages;
