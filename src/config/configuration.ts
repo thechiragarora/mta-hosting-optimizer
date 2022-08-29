@@ -9,8 +9,8 @@ const configuration: IConfig = Object.freeze({
     env: envVars.NODE_ENV,
     port: envVars.PORT,
     mongoUrl: envVars.MONGO_URL,
-    thersholdValue: envVars.THERSHOLD_VALUE,
-    host: envVars.HOSTNAME || 'localhost'
+    thersholdValue: Number(envVars.THERSHOLD_VALUE),
+    host: envVars.HOSTNAME
 });
 
 export default configuration;
