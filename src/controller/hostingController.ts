@@ -10,7 +10,7 @@ class HostingController {
 
     public static getInstance() {
         if (!HostingController.instance) {
-            return HostingController.instance = new HostingController();
+            HostingController.instance = new HostingController();
         }
         return HostingController.instance;
     }
@@ -31,7 +31,7 @@ class HostingController {
                 }
             },
             {
-                $match: { activeCount: { $lte: Number(thersholdValue) } }
+                $match: { activeCount: { $lte: thersholdValue } }
             },
             { $skip: skip }, { $limit: limit },
             ]);
@@ -46,7 +46,7 @@ class HostingController {
     addMockHostings = async (req, res, next) => {
         try {
             await this.hostingService.createAll(mockHostings as IHosting[]);
-            return res.send({ message: 'Added Mock hostings data', status: 200 });
+            return res.status(201).send({ message: 'Added Mock hostings data', status: 201 });
         } catch (err) {
             next(err);
         }

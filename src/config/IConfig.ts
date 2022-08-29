@@ -2,6 +2,6 @@ export default interface IConfig {
     env: string;
     port: string;
     mongoUrl: string;
-    thersholdValue: string;
+    thersholdValue: number;
     host: string;
 }
